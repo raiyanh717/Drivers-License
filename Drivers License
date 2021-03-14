@@ -1,0 +1,39 @@
+//This file is a simple drives license simulator
+//It will allow the user to either obtain a license or deny them one based off age/score.
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String fname;
+        String lname;
+        int age;
+        int score;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter your first name: ");
+        fname = scan.next();
+
+        System.out.println("Enter your first name: ");
+        lname = scan.next();
+
+        System.out.println("Enter your age: ");
+        age = scan.nextInt();
+        if (age < 16)
+            System.out.println("You are not old enough to receive your license");
+        else {
+            System.out.println("Enter your score: ");
+            score = scan.nextInt();
+            if (score < 80)
+                System.out.println("You have failed the drivers test and must retake it");
+            else
+            {
+                System.out.println("You have passed and are eligible to receive your license");
+                System.out.println("Congratulations" + " " + fname + " " + lname);
+            }
+            scan.close();
+
+        }
+    }
+}
